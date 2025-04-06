@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Shadow Sneak</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
   <div class="container">
@@ -28,19 +28,20 @@
 
     <div class="menu">
       <button class="play-button" id="openModalBtn">PLAY</button><br>
-      <button class="play-button">SKIN</button>
+      <button class="play-button" id="openModalBtn">SKIN</button><br>
+      <button class="play-button" id="openModalBtn">SETTINGS</button>
     </div>
 
-    <div id="modal" class="modal">
+  <div id="modal" class="modal">
     <div class="modal-content">
       <span class="close" id="closeModalBtn">&times;</span>
-      <h2>SELEZIONA IL SALVATAGGIO</h2>
-      <button class="play-button" id="openModalBtn">SALVATAGGIO 1</button><br>
-      <button class="play-button" id="openModalBtn">SALVATAGGIO 2</button><br>
-      <button class="play-button" id="openModalBtn">SALVATAGGIO 3</button><br>
+      <h2 id="titoloLOGIN">LOG-IN PAGE</h2><br>
+      <p id="descLOGIN">If you already have an account please log-in instead create a new one for start playing</p>
+      <button class="play-button-login" id="openModalBtn">LOG-IN</button>
+      <button class="play-button-login" id="openModalBtn">SING-IN</button><br><br>
     </div>
   </div>
 
-  <script src="script.js"></script>
+  <script src="./script.js"></script>
 </body>
 </html>
