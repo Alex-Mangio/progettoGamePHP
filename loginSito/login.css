@@ -51,12 +51,12 @@ body {
   .textbox {
     margin-bottom: 30px; 
     position: relative;
-    width: 84%;
+    width: 100%;
   }
   
   .textbox input {
     width: 100%;
-    padding: 18px; 
+    padding: 18px;
     border: 1px solid #ccc;
     border-radius: 8px;
     font-size: 16px;

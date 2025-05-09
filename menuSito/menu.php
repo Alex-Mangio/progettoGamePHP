@@ -38,7 +38,7 @@
       <h2 id="titoloLOGIN">LOG-IN PAGE</h2><br>
       <p id="descLOGIN">If you already have an account please log-in instead create a new one for start playing</p>
       <form action="../loginSito/login.php"><button class="play-button-login" id="openModalBtn">LOG-IN</button></form>
-      <form action="../loginSito/singin.php"><button class="play-button-login" id="openModalBtn">SING-IN</button></form>
+      <form action="../loginSito/signin.php"><button class="play-button-login" id="openModalBtn">SING-IN</button></form>
     </div>
   </div>
 

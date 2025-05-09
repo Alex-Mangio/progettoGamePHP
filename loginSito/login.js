@@ -1,5 +1,5 @@
 const togglePassword = document.getElementById('toggle-password');
-    const passwordField = document.getElementById('password');
+const passwordField = document.getElementById('password');
 
     togglePassword.addEventListener('click', function() {
       if (passwordField.type === 'password') {
@@ -10,3 +10,4 @@ const togglePassword = document.getElementById('toggle-password');
         togglePassword.textContent = '👁️';
       }
     });
+    

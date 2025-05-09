@@ -33,23 +33,36 @@ body {
   }
   
   .textbox {
-    margin-bottom: 20px;
+    margin-bottom: 20px; 
+    position: relative;
+    width: 91%;
   }
   
   .textbox input {
     width: 100%;
-    padding: 12px;
+    padding: 18px; 
     border: 1px solid #ccc;
-    border-radius: 5px;
+    border-radius: 8px;
     font-size: 16px;
     color: #333;
     outline: none;
+    transition: border-color 0.3s;
   }
   
   .textbox input:focus {
     border-color: #6A4C93;
   }
   
+  .eye-icon {
+    position: absolute;
+    right: 1px;
+    top: 50%;
+    transform: translateY(-52%);
+    font-size: 20px;
+    cursor: pointer;
+    color: #6A4C93;
+  }
+
   .remember-me {
     text-align: left;
     margin-bottom: 20px;
@@ -58,6 +71,21 @@ body {
   .remember-me label {
     font-size: 14px;
     color: #666;
+  }
+
+  .signup-link p {
+    font-size: 16px;
+    color: #666;
+    margin-top: 20px;
+  }
+  
+  .signup-link a {
+    color: #6A4C93;
+    text-decoration: none;
+  }
+  
+  .signup-link a:hover {
+    text-decoration: underline;
   }
   
   .submit-btn button {

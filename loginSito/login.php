@@ -8,8 +8,8 @@
 
   <div class="login-container">
     <div class="login-box">
-      <h2>Login</h2>
-      <form action="#" method="POST">
+      <h2>Login for start playing!</h2>
+      <form action="confermaLogin.php" method="POST">
         <div class="textbox">
           <input type="text" placeholder="Username" name="username" required>
         </div>
@@ -21,7 +21,7 @@
           <button type="submit">Login</button>
         </div>
         <div class="signup-link">
-          <p>Don't have an account? <a href="singin.php">Sing-in</a></p>
+          <p>Don't have an account? <a href="signin.php">Sing-in</a></p>
         </div>
       </form>
     </div>
