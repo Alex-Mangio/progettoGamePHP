@@ -6,6 +6,7 @@
     <title>Document</title>
 </head>
 <body>
-    CIAO
+    <canvas id="canvas"></canvas>
+    <script src="game.js"></script>
 </body>
 </html>
