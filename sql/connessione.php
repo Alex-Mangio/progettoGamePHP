@@ -1,6 +1,6 @@
 <?php
 try{
-$conn = new MySQLi("user", "root", "CiaoAlex2006", "dbSito");
+$conn = new MySQLi("localhost", "root", "", "dbSito");
 }catch(Exception $e){
     die("Connessione fallita: " . $e->getMessage());
 }

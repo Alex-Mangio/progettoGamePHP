@@ -8,7 +8,7 @@
 
   <div class="login-container">
     <div class="login-box">
-      <h2>Login for start playing!</h2>
+      <h2>LOGIN TO START PLAYING!</h2>
       <form action="confermaLogin.php" method="POST">
         <div class="textbox">
           <input type="text" placeholder="Username" name="username" required>

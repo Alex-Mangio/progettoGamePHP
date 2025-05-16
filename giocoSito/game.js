@@ -13,6 +13,7 @@ let player = {
     height: 20
 }
 
+const keyInputs = new KeyInputs();
 
 window.onload = () => {
     
@@ -24,7 +25,7 @@ window.onload = () => {
     
     requestAnimationFrame(update);
     
-    document.addEventListener("keydown",movePlayer);
+    movePlayer();
 }
 
 function update(){
@@ -41,27 +42,29 @@ function update(){
 
 }
 
-function movePlayer(e){
-    
+function movePlayer(){
+
     if(gameOver){
         return;
     }
+
+    document.addEventListener("keydown",keyInputs.getKeyPressed);
     
     const speed = 2;
     
-    if(e.code == "KeyW" && player.y > 0){
+    if(keyInputs.wPressed === true && player.y < 0){
         player.y -= speed;
     }
     
-    if(e.code == "KeyS" && player.y + player.height < canvas.height){
+    if(keyInputs.sPressed && player.y + player.height < canvas.height){
         player.y += speed;
     }
     
-    if(e.code == "KeyD" && player.x + player.width < canvas.width){
+    if(keyInputs.dPressed && player.x + player.width < canvas.width){
         player.x += speed;
     }
     
-    if(e.code == "KeyA" && player.x > 0){
+    if(keyInputs.aPressed && player.x > 0){
         player.x -= speed;
     }
 }
