@@ -7,7 +7,7 @@ $stmt->bind_param("ss",$_POST["username"],$_POST["password"]);
 $stmt->execute();
 $result = $stmt->get_result();
 if($result == null){
-    header("Location: login.php");
+    header("Location: login.php&error=invalid_credentials");
     exit();
 }else{
     header("Location: ../giocoSito/paginaGame.php");

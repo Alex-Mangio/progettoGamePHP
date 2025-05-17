@@ -1,70 +1,107 @@
+import keyInputs from "./KeyInputs.js";
+import Tile from "./gameMap.js";
+
 let ctx;
 let canvas;
 
-let canvasH = 800;
-let canvasW = 900;
+let canvasH = window.innerHeight;
+let canvasW = window.innerWidth;
 
 let gameOver = false;
+
+const playerImg = new Image();
+playerImg.src = "./gameImages/hooded_skeletal_character_final_32x32.png";
 
 let player = {
     x: 0,
     y: 0,
-    width: 20,
-    height: 20
+    width: 70,
+    height: 70,
+    image: playerImg
 }
 
-const keyInputs = new KeyInputs();
+let map = [];
+
+let inputs = new keyInputs();
 
 window.onload = () => {
     
-    canvas = document.getElementById("canvas");
+    canvas = document.getElementById("canvas"); 
     canvas.height = canvasH;
     canvas.width = canvasW;
 
     ctx = canvas.getContext('2d');
+    ctx.imageSmoothingEnabled = false;
+
+    drawMap();
     
     requestAnimationFrame(update);
-    
-    movePlayer();
 }
 
 function update(){
 
     requestAnimationFrame(update);
 
-    if(gameOver){
-        return;
-    }
+    if(gameOver) return;
+    
+    movePlayer();
 
     ctx.clearRect(0,0,canvas.width,canvas.height);
-    ctx.fillStyle = 'purple';
-    ctx.fillRect(player.x,player.y,player.width,player.height);
+
+    map.forEach((square) => square.draw(ctx));
+
+    ctx.drawImage(player.image,player.x,player.y,player.width,player.height);
+
+
+}
+
+function drawMap(){
+
+    const mapMatrix = [ 
+    ["-","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-"],
+    ["-","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-"],
+    ["-","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-"],
+    ];
+
+    mapMatrix.forEach((row, i) => {
+        row.forEach((symbol, j) => {
+            switch(symbol){
+                case "-":
+                    map.push(
+                        new Tile({
+                            position: {
+                                x:Tile.getWidth() * j,
+                                y:Tile.getHeight() * i
+                            }
+                        })
+                        
+                    );
+                break;
+            }
+        })
+    });
 
 }
 
 function movePlayer(){
 
-    if(gameOver){
-        return;
-    }
-
-    document.addEventListener("keydown",keyInputs.getKeyPressed);
+    if(gameOver) return;
     
     const speed = 2;
     
-    if(keyInputs.wPressed === true && player.y < 0){
+    if(inputs.wPressed && player.y > 0){
         player.y -= speed;
     }
     
-    if(keyInputs.sPressed && player.y + player.height < canvas.height){
+    if(inputs.sPressed && player.y + player.height < canvas.height){
         player.y += speed;
     }
     
-    if(keyInputs.dPressed && player.x + player.width < canvas.width){
+    if(inputs.dPressed && player.x + player.width < canvas.width){
         player.x += speed;
     }
     
-    if(keyInputs.aPressed && player.x > 0){
+    if(inputs.aPressed && player.x > 0){
         player.x -= speed;
     }
 }
