@@ -15,10 +15,10 @@ export default class Tile{
     }
 
     static getWidth() {
-        return 40;
+        return 35;
     }
 
     static getHeight() {
-        return 40;
+        return 35;
     }
 }

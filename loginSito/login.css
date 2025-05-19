@@ -2,14 +2,11 @@ body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background: #f4f4f9;
+    background: #71797E;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-image: linear-gradient(45deg, #6A4C93, #FFB300);
-    background-size: 400% 400%;
-    animation: gradientAnimation 6s ease infinite;
   }
   
   @keyframes gradientAnimation {
@@ -43,7 +40,7 @@ body {
   
   h2 {
     font-size: 45px; 
-    color: #6A4C93;
+    color: #5a3e7b;
     margin-bottom: 30px; 
     font-weight: 600;
   }
@@ -66,7 +63,7 @@ body {
   }
   
   .textbox input:focus {
-    border-color: #6A4C93;
+    border-color: #5a3e7b;
   }
   
   .eye-icon {
@@ -76,14 +73,14 @@ body {
     transform: translateY(-52%);
     font-size: 20px;
     cursor: pointer;
-    color: #6A4C93;
+    color: #5a3e7b;
   }
   
 
   .submit-btn button {
     width: 100%;
     padding: 18px; 
-    background-color: #FFB300;
+    background-color: #5a3e7b;
     border: none;
     border-radius: 8px;
     color: white;
@@ -93,7 +90,7 @@ body {
   }
   
   .submit-btn button:hover {
-    background-color: #e69300;
+    background-color: #32174D;
   }
   
   .signup-link p {
@@ -103,7 +100,7 @@ body {
   }
   
   .signup-link a {
-    color: #6A4C93;
+    color: #5a3e7b;
     text-decoration: none;
   }
   

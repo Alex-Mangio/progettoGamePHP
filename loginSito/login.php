@@ -9,7 +9,7 @@ if(isset($_GET["error"])){
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" type="image/x-icon" href="./gameImages/hooded_skeletal_character_final_32x32.png" sizes="64x64">
+  <link rel="icon" type="image/x-icon" href="../giocoSito/gameImages/hooded_skeletal_character_final_32x32.png" sizes="64x64">
   <title>Login - Shadow Sneak</title>
   <link rel="stylesheet" href="./login.css">
 

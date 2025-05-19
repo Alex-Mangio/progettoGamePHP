@@ -11,7 +11,7 @@ if(isset($_GET["error"])){
       break;
   }
 }
-$old_inputs = $_SESSION['old_input'];
+$old_input = $_SESSION['old_input'] ?? [];
 ?>
 
 <!DOCTYPE html>
@@ -19,7 +19,7 @@ $old_inputs = $_SESSION['old_input'];
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" type="image/x-icon" href="./gameImages/hooded_skeletal_character_final_32x32.png" sizes="64x64">
+  <link rel="icon" type="image/x-icon" href="../giocoSito/gameImages/hooded_skeletal_character_final_32x32.png" sizes="64x64">
   <title>Sing-in - Shadow Sneak</title>
   <link rel="stylesheet" href="./signin.css">
 
