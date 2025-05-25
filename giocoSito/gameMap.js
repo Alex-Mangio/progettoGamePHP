@@ -1,24 +1,24 @@
-export default class Tile{
-    
+export const bushImage = new Image();
+
+export default class Tile {
     static width;
     static height;
 
-    constructor({position}){
+    constructor({ position }) {
         this.position = position;
-        this.width = 70;
-        this.height = 70;
+        this.width = 64;
+        this.height = 64;
     }
 
-    draw(ctx){
-        ctx.fillStyle = "gray";
-        ctx.fillRect(this.position.x,this.position.y,this.width,this.height);
+    draw(ctx) {
+        ctx.drawImage(bushImage, this.position.x, this.position.y, this.width, this.height);
     }
 
     static getWidth() {
-        return 35;
+        return this.width;
     }
 
     static getHeight() {
-        return 35;
+        return this.height;
     }
 }
