@@ -17,7 +17,7 @@ const player = new Player({
 });
 
 const enemy = new Enemy({
-    position: { x: 1610, y: 805 },
+    position: { x: 1610, y: 765 },
     speed: 1.5
 });
 
@@ -64,7 +64,7 @@ function update() {
         checkCollision(enemy, tile);
     });
 
-    enemy.update(map);
+    enemy.update(map,player);
 
     enemy.draw(ctx);
     player.drawPlayer(ctx);
