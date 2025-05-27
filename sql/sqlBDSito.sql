@@ -11,3 +11,5 @@ CREATE TABLE Users(
     CONSTRAINT chk_email CHECK (email REGEXP '^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$') ENFORCED,
     user_password varchar(255) NOT NULL
 );
+
+INSERT INTO Users(nome,cognome,username,email,user_password) VALUES("Alex","Mangio","username","ale@gmail.com","password");

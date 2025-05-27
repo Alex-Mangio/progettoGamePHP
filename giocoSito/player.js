@@ -1,8 +1,8 @@
 export default class Player {
-    width = 64;
-    height = 64;
-    hitboxWidth = 32;
-    hitboxHeight = 32;
+    width =70;
+    height =70;
+    hitboxWidth = 40;
+    hitboxHeight = 40;
     imageLoad = false;
 
     constructor({ position, velocity }) {

@@ -1,24 +1,26 @@
 export const bushImage = new Image();
-
 export default class Tile {
-    static width;
-    static height;
+    static width = 70;
+    static height = 70;
 
     constructor({ position }) {
         this.position = position;
-        this.width = 64;
-        this.height = 64;
+        this.width = Tile.getWidth();
+        this.height = Tile.getHeight();
     }
 
     draw(ctx) {
-        ctx.drawImage(bushImage, this.position.x, this.position.y, this.width, this.height);
+        console.log("bushImage.complete", bushImage.complete);
+            ctx.drawImage(bushImage, this.position.x, this.position.y, this.width,this.height);
+         
     }
 
     static getWidth() {
-        return this.width;
+        return 35;
     }
 
     static getHeight() {
-        return this.height;
+        return 35;
     }
+    
 }

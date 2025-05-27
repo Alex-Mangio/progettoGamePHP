@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="./gameStyle.css">
 </head>
 <body>
+    <div id="message"></div>
     <canvas id="canvas"></canvas>
     <script type="module" src="game.js"></script>
 </body>

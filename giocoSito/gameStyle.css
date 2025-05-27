@@ -6,4 +6,19 @@ html, body {
 
 #canvas {
    display: block; 
+   background-color: grey;
+}
+
+#message {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  font-size: 24px;
+  padding: 20px;
+  border-radius: 10px;
+  display: none; /* Qui è corretto inizialmente */
+  z-index: 1000;
 }
